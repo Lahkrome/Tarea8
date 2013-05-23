@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro contra Web Service</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="loginform cf">
+		
+		<form name="login" method="post" action="proyecto.php" accept-charset="utf-8">
+			<ul>
+				<li>
+					<label for="user">RUT</label>
+					<input type="text" id="user" name="user"  placeholder="13433523-1"/>
+				</li>
+				<li>
+					<label for="pass">Contraseña</label>
+					<input type="password" id="pass" name="pass" onkeyup = "this.value=this.value.toUpperCase()" placeholder="Contraseña" />
+				</li>
+				
+				<li>
+					<input type="submit" value="Ingresar">
+				</li>
+                                
+			</ul>
+		</form>
+	</section>
+</body>
+</html>
