@@ -15,15 +15,13 @@ $parametros['password']= $str;
 
 $objClienteSOAP = new soapclient("http://informatica.utem.cl:8011/dirdoc-auth/ws/auth?wsdl");
 $objRespuesta = $objClienteSOAP->autenticar($parametros);
+// Cómo llega el objeto
+var_dump($objRespuesta);
 
-if ($objRespuesta == true)
-
-{
+// Comparación con tipos
+if ($objRespuesta === true) {
 	echo "Ingreso exitoso";
-}
-
-else
-{
+} else {
 	echo "Rechazado";
 }
 
