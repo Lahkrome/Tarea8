@@ -19,6 +19,8 @@ $objRespuesta = $objClienteSOAP->autenticar($parametros);
 var_dump($objRespuesta);
 
 // Comparación con tipos
+$codigo = (int) $objRespuesta->return->codigo;
+echo "Codigo: $codigo <br />";
 if ($objRespuesta === true) {
 	echo "Ingreso exitoso";
 } else {
