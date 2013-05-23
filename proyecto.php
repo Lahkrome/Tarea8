@@ -16,22 +16,26 @@ $parametros['password']= $str;
 $objClienteSOAP = new soapclient("http://informatica.utem.cl:8011/dirdoc-auth/ws/auth?wsdl");
 $objRespuesta = $objClienteSOAP->autenticar($parametros);
 // Cómo llega el objeto
-var_dump($objRespuesta);
+//var_dump($objRespuesta);
 
 // Comparación con tipos
 $codigo = (int) $objRespuesta->return->codigo;
-echo "Codigo: $codigo <br />";
-if ($objRespuesta === true) {
-	echo "Ingreso exitoso";
-} else {
-	echo "Rechazado";
+$res = (string) $objRespuesta->return->descripcion;
+//echo "Codigo: $codigo <br />";
+//echo "Codigo: $res <br />";
+
+if ($codigo == 1) 
+{
+	echo '<h2 style="color:#0000ff">Ingreso satifactorio</h2>';
+	echo $res;
+} else 
+
+{
+	echo '<h2 style="color:#0000ff">Acceso denegado</h2>';
+	echo $res;
 }
 
 
-
-                               
-
-?>
 
 
 
