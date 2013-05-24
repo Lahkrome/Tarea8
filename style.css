@@ -1,9 +1,13 @@
-body{
-background-image: url(http://4.bp.blogspot.com/_Z-F5P3Fm8Jg/TDtWWs_ky9I/AAAAAAAAB4s/acZrkMwMxw0/s1600/0129+-+Verde.jpg);
-}
+html {
+	background-image: url(http://4.bp.blogspot.com/_Z-F5P3Fm8Jg/TDtWWs_ky9I/AAAAAAAAB4s/acZrkMwMxw0/s1600/0129+-+Verde.jpg);
 
+
+
+        
+	font-size: 15pt;
+}
 label {
- display: block;
+	display: block;
 	color: #999;
 }
 .cf:before,
