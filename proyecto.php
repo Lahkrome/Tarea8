@@ -16,7 +16,10 @@ $parametros=array();
 $parametros['rut']= $sp;
 $parametros['password']= $str;
 
-$objClienteSOAP = new soapclient("http://informatica.utem.cl:8011/dirdoc-auth/ws/auth?wsdl");
+$auth = array(  'login'          => "mario",
+                'password'       => sha1("isw.mario"));
+
+$objClienteSOAP = new soapclient("http://informatica.utem.cl:8011/dirdoc-auth/ws/auth?wsdl",$auth);
 $objRespuesta = $objClienteSOAP->autenticar($parametros);
 // Cómo llega el objeto
 //var_dump($objRespuesta);
@@ -41,6 +44,4 @@ if ($codigo == 1)
 
 
 
-
-
- 
+?>
